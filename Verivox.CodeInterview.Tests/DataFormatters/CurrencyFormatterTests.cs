@@ -14,7 +14,7 @@ public class CurrencyFormatterTests
     [Theory]
     [InlineData(830, "830,00 €")]
     [InlineData(1050, "1.050,00 €")]
-    public void BasicElectricityTariffStrategy_ReturnsCorrectCost_ForBasicTariff(decimal amount, string expectedFormattedAmount)
+    public void CurrencyFormatter_ReturnsCorrectStringAmountRepresentation_ForTheory(decimal amount, string expectedFormattedAmount)
     {
         var formattedAmount = currencyFormatter.FormatAmount(amount);
         Assert.Equal(formattedAmount, expectedFormattedAmount);
