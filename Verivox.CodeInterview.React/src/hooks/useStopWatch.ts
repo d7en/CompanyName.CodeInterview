@@ -34,10 +34,8 @@ class StopWatch {
 
     start() {
         if (this.isRunning) {
-            console.log("Stopwatch is already running.");
             return;
         }
-        console.log("Stopwatch started.");
 
         this.startTime = new Date().getTime();
         this.isRunning = true;
@@ -45,13 +43,11 @@ class StopWatch {
 
     stop() {
         if (!this.isRunning) {
-            console.log("Stopwatch is not running.");
             return;
         }
 
         this.stopTime = new Date().getTime();
         this.isRunning = false;
-        console.log("Stopwatch stopped.");
     }
 
     reset() {

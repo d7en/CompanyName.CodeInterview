@@ -12,13 +12,23 @@ export const UserList = (props: UserListProps) => {
     }
 
     return (
-        <div>
-            <ul>
-                There are {users.length} users
-                {users.map(user => 
-                    <UserListItem user={user} key={user.id} />
-                )}
-            </ul>
+        <div className="row">
+            <div className="col-sm-6">
+                <table className="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Full name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map(user =>
+                            <UserListItem user={user} key={user.id} />
+                        )}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

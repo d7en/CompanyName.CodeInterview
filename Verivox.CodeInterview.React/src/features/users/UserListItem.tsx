@@ -6,8 +6,10 @@ export const UserListItem = (props: UserListItemProps) => {
     const { id, email, name, surname } = user;
 
     return (
-        <li>
-            {id} - {name} {surname} ({email})
-        </li>
+        <tr>
+            <td>{id}</td>
+            <td>{name} {surname}</td>
+            <td>{email}</td>
+        </tr>
     )
 }

@@ -8,20 +8,19 @@ export const UserFilter = (props: UserFilterProps) => {
     const { userFilter, setUserFilterCallback } = props;
 
     return (
-        <form>
-            <fieldset>
-                <legend>Filter</legend>
-
-                <div>
-                    <label htmlFor={'email'}>Email</label>
-                    <input type={'email'} id={'email'} value={userFilter.email} onChange={e => setUserFilterCallback({ ...userFilter, email: e.target.value || '' })} />
+        <form className="mb-3">
+            <div className="row">
+                <div className="col-sm-12">
+                    <h5>Filters:</h5>
+                </div>
+                <div className="col-sm-12 col-md-3">
+                    <input placeholder="email" className="form-control" type={'email'} id={'email'} value={userFilter.email} onChange={e => setUserFilterCallback({ ...userFilter, email: e.target.value || '' })} />
                 </div>
 
-                <div>
-                    <label htmlFor={'name'}>Name</label>
-                    <input type={'text'} id={'name'} value={userFilter.name} onChange={e => setUserFilterCallback({ ...userFilter, name: e.target.value || '' })} />
+                <div className="col-sm-12 col-md-3">
+                    <input placeholder="name" className="form-control" type={'text'} id={'name'} value={userFilter.name} onChange={e => setUserFilterCallback({ ...userFilter, name: e.target.value || '' })} />
                 </div>
-            </fieldset>
+            </div>
         </form>
     )
 }

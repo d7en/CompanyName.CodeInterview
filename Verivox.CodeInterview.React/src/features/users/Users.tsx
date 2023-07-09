@@ -33,7 +33,6 @@ export const Users = () => {
             setUsersLoadingState({ ...usersLoadingState, loading: false, error: null });
         }
         catch (e) {
-            console.log(e);
             setUsersLoadingState({ ...usersLoadingState, loading: false, error: e });
         }
     };
